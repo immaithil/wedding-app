@@ -2,9 +2,13 @@ package com.immaithil.wedding_app.model;
 
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "gallery_images")
+@Getter
+@Setter
 public class Image {
 
     @Id
@@ -28,19 +32,4 @@ public class Image {
         this.driveFileId = driveFileId;
     }
 
-    // --- Getters and Setters ---
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-
-    public String getUploaderName() { return uploaderName; }
-    public void setUploaderName(String uploaderName) { this.uploaderName = uploaderName; }
-
-    public String getDriveFileId() { return driveFileId; }
-    public void setDriveFileId(String driveFileId) { this.driveFileId = driveFileId; }
-
-    public int getUpvotes() { return upvotes; }
-    public void setUpvotes(int upvotes) { this.upvotes = upvotes; }
-
-    public int getDownvotes() { return downvotes; }
-    public void setDownvotes(int downvotes) { this.downvotes = downvotes; }
 }

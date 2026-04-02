@@ -72,4 +72,10 @@ public class ImageController {
             return ResponseEntity.badRequest().body(e.getMessage());
         }
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteImage(@PathVariable Long id) {
+        imageService.deleteImage(id);
+        return ResponseEntity.ok().build();
+    }
 }
